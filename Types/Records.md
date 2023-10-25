@@ -1,9 +1,6 @@
 #types
 
-sdfsdfsdfds
-
 ---
-
 ## Docs
 
 https://dart.dev/language/records

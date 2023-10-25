@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Records.md",
+                "file": "Class/Class modifiers.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1d2f6991171f82bb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Future.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Records.md",
+                "file": "Future.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Records.md",
+                "file": "Future.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Records.md"
+                "file": "Future.md"
               }
             }
           }
@@ -146,6 +159,18 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "3c489c3090474f85",
-  "lastOpenFiles": []
+  "active": "6ce79176c980ea07",
+  "lastOpenFiles": [
+    "Class/Class modifiers.md",
+    "Class/Classes.md",
+    "Class/Inheritance.md",
+    "Class",
+    "Syntax basics/Metadata.md",
+    "Types/Records.md",
+    "Syntax basics",
+    "Patterns/Pattern types.md",
+    "Types",
+    "Class/Methods.md",
+    "Patterns"
+  ]
 }

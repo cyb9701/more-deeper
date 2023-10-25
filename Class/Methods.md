@@ -54,7 +54,7 @@ With getters and setters, you can start with instance variables, later wrapping 
 > 게터와 세터를 사용하면 클라이언트 코드를 변경하지 않고도 인스턴스 변수로 시작하여 나중에 메서드로 래핑할 수 있습니다.
 
 ### Abstract methods
-Instance, getter, and setter methods can be abstract, defining an interface but leaving its implementation up to other classes. Abstract methods can only exist in [abstract classes](https://dart.dev/language/class-modifiers#abstract) or [mixins](https://dart.dev/language/mixins).
+Instance, getter, and setter methods can be abstract, defining an interface but leaving its implementation up to other classes. Abstract methods can only exist in [[Class modifiers#abstract]] or [mixins](https://dart.dev/language/mixins).
 > 인스턴스, 게터 및 세터 메서드는 추상적일 수 있으며, 인터페이스를 정의하지만 그 구현은 다른 클래스에 맡길 수 있습니다. 추상 메서드는 추상 클래스나 믹스인에만 존재할 수 있습니다.
 
 To make a method abstract, use a semicolon (;) instead of a method body:
