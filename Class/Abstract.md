@@ -65,3 +65,38 @@ class EffectiveDoer extends Doer {
   }
 }
 ```
+
+---
+## [Example]
+```dart
+abstract class Person {  
+  eat();  
+    
+  walk();  
+  
+  void sleep() {  
+    print('Person must sleep');  
+  }  
+}  
+  
+class Developer extends Person {  
+  // Must override.  
+  @override  
+  void eat() {  
+    print('Developer eat a meal');  
+  }  
+  
+  // Must override.  
+  @override  
+  void walk() {  
+   print('Walk');  
+  }  
+}  
+  
+void main() {   
+  // Person person = Person();  // Error. 
+  Person person = Developer();  
+  person.eat(); // print.   
+  person.sleep();  
+}
+```

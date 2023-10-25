@@ -45,15 +45,14 @@ class SmartTelevision extends Television {
 }
 ```
 
-For another usage of`extends`, see the discussion
-of[parameterized types](https://dart.dev/language/generics#restricting-the-parameterized-type)on the Generics page.
+For another usage of`extends`, see the discussion of [parameterized types](https://dart.dev/language/generics#restricting-the-parameterized-type)on the Generics page.
 > 확장의 또 다른 사용법은 제네릭 페이지에서 매개 변수화된 유형에 대한 논의를 참조하십시오.
 
 ### Overriding members
 
 Subclasses can override instance methods (including[operators](https://dart.dev/language/methods#operators)), getters,
 and setters. You can use the`@override`annotation to indicate that you are intentionally overriding a member:
-> 서브클래스는 인스턴스 메서드( 연산자 포함), 게터 및 세터를 재정의할 수 있습니다. @Override 주석을 사용하여 의도적으로 회원을 재정의하고 있음을 나타낼 수 있습니다:
+> 서브클래스는 인스턴스 메서드(연산자 포함), 게터 및 세터를 재정의할 수 있습니다. @Override 주석을 사용하여 의도적으로 회원을 재정의하고 있음을 나타낼 수 있습니다:
 
 ```dart
 class Television {
