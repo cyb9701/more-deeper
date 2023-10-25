@@ -25,7 +25,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Future.md",
+                "file": "Class/Extends.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5c86f7951a9a9328",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Class/Abstract.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Future.md",
+                "file": "Class/Extends.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Future.md",
+                "file": "Class/Extends.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Future.md"
+                "file": "Class/Extends.md"
               }
             }
           }
@@ -159,18 +171,22 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "6ce79176c980ea07",
+  "active": "1d2f6991171f82bb",
   "lastOpenFiles": [
-    "Class/Class modifiers.md",
-    "Class/Classes.md",
     "Class/Inheritance.md",
+    "Future/Future.md",
+    "Class/Abstract.md",
+    "Class/Methods.md",
+    "Future",
+    "Class/Extends.md",
+    "Class/Classes.md",
+    "Class/Class modifiers.md",
     "Class",
     "Syntax basics/Metadata.md",
     "Types/Records.md",
     "Syntax basics",
     "Patterns/Pattern types.md",
     "Types",
-    "Class/Methods.md",
     "Patterns"
   ]
 }
