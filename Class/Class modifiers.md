@@ -41,45 +41,6 @@ To allow unrestricted permission to construct or subtype from any library, use a
 > - 클래스 또는 믹스인의 인터페이스를 구현합니다.
 > - 믹스인 또는 믹스인 클래스에서 믹스합니다.
 
-### abstract
-To define a class that doesn’t require a full, concrete implementation of its entire interface, use the `abstract` modifier.
-> 전체 인터페이스의 구체적인 구현이 필요하지 않은 클래스를 정의하려면 추상 수정자를 사용하세요.
-
-Abstract classes cannot be constructed from any library, whether its own or an outside library. Abstract classes often have [[Methods#Abstract methods]].
-> 추상 클래스는 자체 라이브러리든 외부 라이브러리든 어떤 라이브러리에서도 생성할 수 없습니다. 추상 클래스는 종종 추상 메서드를 갖습니다.
-
-```dart
-// Library a.dart
-abstract class Vehicle {
-  void moveForward(int meters);
-}
-```
-
-```dart
-// Library b.dart
-import 'a.dart';
-
-// Error: Cannot be constructed
-Vehicle myVehicle = Vehicle();
-
-// Can be extended
-class Car extends Vehicle {
-  int passengers = 4;
-  // ···
-}
-
-// Can be implemented
-class MockVehicle implements Vehicle {
-  @override
-  void moveForward(int meters) {
-    // ...
-  }
-}
-```
-
-If you want your abstract class to appear to be instantiable, define a [factory constructor](https://dart.dev/language/constructors#factory-constructors).
-> 추상 클래스를 인스턴스화할 수 있는 것처럼 보이게 하려면 팩토리 생성자를 정의하세요.
-
 ### base
 To enforce inheritance of a class or mixin’s implementation, use the `base` modifier. A base class disallows implementation outside of its own library. This guarantees:
 > 클래스 또는 믹스인 구현의 상속을 강제하려면 베이스 수정자를 사용합니다. 베이스 클래스는 자체 라이브러리 외부의 구현을 허용하지 않습니다. 이렇게 하면 보장됩니다:
