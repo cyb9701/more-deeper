@@ -1,9 +1,25 @@
-#classes #objects #inheritance
+#classes #inheritance
 
 ---
+## [Docs] Inheritance
+https://dart.dev/language#inheritance
 
-## Docs
+Dart has single inheritance.
+> 다트에는 단일 상속이 있습니다.
 
+```dart
+class Orbiter extends Spacecraft {
+  double altitude;
+
+  Orbiter(super.name, DateTime super.launchDate, this.altitude);
+}
+```
+
+[Read more](https://dart.dev/language/extend) about extending classes, the optional `@override` annotation, and more.
+> 클래스 확장, 선택적 @override 어노테이션 등에 대해 자세히 알아보세요.
+
+---
+## [Docs] Extend
 https://dart.dev/language/extend
 
 Use`extends`to create a subclass, and`super`to refer to the superclass:
@@ -121,8 +137,7 @@ informal[noSuchMethod forwarding specification.](https://github.com/dart-lang/la
 > 자세한 내용은 비공식적인 noSuchMethod 전달 사양을 참조하십시오.
 
 ---
-
-## Organize
+## [Organize]
 
 Dart에는 단일 상속이 가능하다.
 상속은 클래스의 멤버를 물려주는 것을 의미한다.
@@ -145,8 +160,7 @@ class 자식 클래스명 extends 부모 클래스명 {
 또한 슈퍼 클래스를 상속 받게 되면 슈퍼 클래스의 멤버 함수를 `override` 하지 않아도 문제가 없다.
 
 ---
-
-## Example
+## [Example]
 
 ```dart
 class Human {

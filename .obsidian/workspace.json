@@ -26,7 +26,7 @@
               "type": "markdown",
               "state": {
                 "file": "Class/Extends.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -38,13 +38,13 @@
               "type": "markdown",
               "state": {
                 "file": "Class/Abstract.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -110,8 +110,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Class/Extends.md",
-                "collapseAll": false,
+                "file": "Class/Abstract.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Class/Extends.md",
+                "file": "Class/Abstract.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,11 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Class/Extends.md"
+                "file": "Class/Abstract.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -171,16 +172,16 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "1d2f6991171f82bb",
+  "active": "5c86f7951a9a9328",
   "lastOpenFiles": [
+    "Class/Classes.md",
+    "Class/Extends.md",
+    "Class/Abstract.md",
+    "Class/Class modifiers.md",
     "Class/Inheritance.md",
     "Future/Future.md",
-    "Class/Abstract.md",
     "Class/Methods.md",
     "Future",
-    "Class/Extends.md",
-    "Class/Classes.md",
-    "Class/Class modifiers.md",
     "Class",
     "Syntax basics/Metadata.md",
     "Types/Records.md",
