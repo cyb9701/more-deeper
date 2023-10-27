@@ -1,7 +1,7 @@
-#abstract #extends #implements
+#class-modifier #abstract #extends #implements
 
 ---
-## [Docs] abstract
+## [Docs] Class modifiers / abstract
 https://dart.dev/language/class-modifiers#abstract
 
 To define a class that doesn’t require a full, concrete implementation of its entire interface, use the `abstract` modifier.
