@@ -71,5 +71,5 @@ You can’t combine some modifiers because they are contradictory, redundant, or
 > - 봉인된 추상화. 봉인된 수업은 항상 암묵적으로 추상적이다.
 > - 인터페이스, 최종 또는 믹스인으로 밀봉. 이러한 접근 수정자는 혼합을 방지한다.
 
-See the [Class modifiers reference](https://dart.dev/language/modifier-reference) for complete guidance.
+See the [[Class modifiers reference]] for complete guidance.
 > 전체 지침은 클래스 수정자 참조를 참조하세요.
