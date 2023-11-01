@@ -1,11 +1,11 @@
-#class-modifier 
+#class #class-modifier 
 
 ---
 ## [Docs] Mixins
 https://dart.dev/language/mixins#class-mixin-or-mixin-class
 
 Mixins are a way of defining code that can be reused in multiple class hierarchies. They are intended to provide member implementations en masse.
-> 믹스인은 여러 클래스 계층 구조에서 재사용할 수 있는 코드를 정의하는 방법입니다. 믹스인은 멤버 구현을 일괄적으로 제공하기 위한 것입니다.
+> 믹스인은 ==여러 클래스 계층 구조== 에서 재사용할 수 있는 코드를 정의하는 방법입니다. 믹스인은 멤버 구현을 일괄적으로 제공하기 위한 것입니다.
 
 To use a mixin, use the `with` keyword followed by one or more mixin names. The following example shows two classes that use mixins:
 > 믹스인을 사용하려면 with 키워드 뒤에 하나 이상의 믹스인 이름을 사용합니다. 다음 예제는 믹스인을 사용하는 두 개의 클래스를 보여줍니다:
@@ -128,9 +128,9 @@ This is similar to how the `on` directive ensures a mixin has access to any in
 ## [Organize]
 
 ### 언제 사용할까?
+https://paulaner80.tistory.com/entry/Dart-mixin-이란-1
 ![[mixin.png]]
 
-`Dolphin`
 `Animal`이라는 슈퍼클래스가 있습니다. `Mammal`, `Bird`, `Fish`가 그 클래스를 상속합니다. 가장 마지막에는 콘크리트 클래스들이 있습니다. 작은 사각형은 행동을 나타냅니다. 
 예를 들어, 파란색 사각형은이 동작을하는 클래스의 인스턴스가 수영 할 수 있음을 나타냅니다. 어떤 동물들은 공통적 인 행동을 공유합니다. 
 

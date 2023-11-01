@@ -1,7 +1,7 @@
 #class-modifier 
 
 ---
-## [Docs] Class modifiers / abstract interface
+## [Docs] Class modifiers | abstract interface
 https://dart.dev/language/class-modifiers#abstract-interface
 
 The most common use for the `interface` modifier is to define a pure interface. [Combine](https://dart.dev/language/class-modifiers#combining-modifiers) the `interface` and [`abstract`](https://dart.dev/language/class-modifiers#abstract)modifiers for an `abstract interface class`.

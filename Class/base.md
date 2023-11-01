@@ -1,7 +1,7 @@
 #class-modifier 
 
 ---
-## [Docs] Class modifiers / base
+## [Docs] Class modifiers | base
 https://dart.dev/language/class-modifiers#base
 
 To enforce inheritance of a class or mixin’s implementation, use the `base` modifier. A base class disallows implementation outside of its own library. This guarantees:

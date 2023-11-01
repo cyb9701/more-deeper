@@ -1,4 +1,4 @@
-#class-modifier #inheritance
+#class #class-modifier #inheritance
 
 ---
 ## [Docs] Inheritance
@@ -19,7 +19,7 @@ class Orbiter extends Spacecraft {
 > 클래스 확장, 선택적 @override 어노테이션 등에 대해 자세히 알아보세요.
 
 ---
-## [Docs] Extend
+## [Docs] Extend a class
 https://dart.dev/language/extend
 
 Use`extends`to create a subclass, and`super`to refer to the superclass:

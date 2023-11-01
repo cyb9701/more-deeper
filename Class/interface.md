@@ -1,7 +1,7 @@
 #class-modifier 
 
 ---
-## [Docs] Class modifiers / interface
+## [Docs] Class modifiers | interface
 https://dart.dev/language/class-modifiers#interface
 
 To define an interface, use the `interface` modifier. Libraries outside of the interface’s own defining library can implement the interface, but not extend it. This guarantees:

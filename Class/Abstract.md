@@ -1,7 +1,7 @@
 #class-modifier #abstract #extends #implements
 
 ---
-## [Docs] Class modifiers / abstract
+## [Docs] Class modifiers | abstract
 https://dart.dev/language/class-modifiers#abstract
 
 To define a class that doesn’t require a full, concrete implementation of its entire interface, use the `abstract` modifier.
@@ -39,7 +39,7 @@ class MockVehicle implements Vehicle {
 }
 ```
 
-If you want your abstract class to appear to be instantiable, define a [factory constructor](https://dart.dev/language/constructors#factory-constructors).
+If you want your abstract class to appear to be instantiable, define a [[factory]].
 > 추상 클래스를 인스턴스화할 수 있는 것처럼 보이게 하려면 팩토리 생성자를 정의하세요.
 
 ---

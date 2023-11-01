@@ -1,7 +1,7 @@
 #class-modifier 
 
 ---
-## [Docs] Classes / Implicit interfaces
+## [Docs] Classes | Implicit interfaces
 https://dart.dev/language/classes#implicit-interfaces
 
 Every class implicitly defines an interface containing all the instance members of the class and of any interfaces it implements. If you want to create a class A that supports class B’s API without inheriting B’s implementation, class A should implement the B interface.

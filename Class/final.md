@@ -1,7 +1,7 @@
 #class-modifier 
 
 ---
-## [Docs] Class modifiers / final
+## [Docs] Class modifiers | final
 https://dart.dev/language/class-modifiers#final
 
 To close the type hierarchy, use the `final` modifier. This prevents subtyping from a class outside of the current library. Disallowing both inheritance and implementation prevents subtyping entirely. This guarantees:

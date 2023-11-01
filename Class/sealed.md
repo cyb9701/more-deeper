@@ -1,7 +1,7 @@
 #class-modifier 
 
 ---
-## [Docs] Class modifiers / sealed
+## [Docs] Class modifiers | sealed
 https://dart.dev/language/class-modifiers#sealed
 
 To create a known, enumerable set of subtypes, use the `sealed` modifier. This allows you to create a switch over those subtypes that is statically ensured to be [_exhaustive_](https://dart.dev/language/branches#exhaustiveness-checking).
