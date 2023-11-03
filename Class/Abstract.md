@@ -1,4 +1,4 @@
-#class-modifier #abstract #extends #implements
+#class-modifier
 
 ---
 ## [Docs] Class modifiers | abstract

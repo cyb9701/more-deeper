@@ -1,4 +1,4 @@
-#class 
+#class #constructor 
 
 ---
 ## [Docs] Constructors | Factory constructors

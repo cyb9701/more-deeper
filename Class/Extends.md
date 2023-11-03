@@ -1,4 +1,4 @@
-#class #class-modifier #inheritance
+#class #class-modifier
 
 ---
 ## [Docs] Inheritance
