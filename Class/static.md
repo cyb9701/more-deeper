@@ -64,3 +64,16 @@ void main() {
 
 You can use static methods as compile-time constants. For example, you can pass a static method as a parameter to a constant constructor.
 > 정적 메서드를 컴파일 타임 상수로 사용할 수 있습니다. 예를 들어 정적 메서드를 상수 생성자에 매개변수로 전달할 수 있습니다.
+
+---
+## [Organize]
+https://velog.io/@letluvrule/Dart-언어-오답노트-25.-static#static의-특징-및-장점
+
+### 특징 & 장점
+1. **메모리 효율성**: 모든 인스턴스가 `static` 변수를 공유하기 때문에, 각 인스턴스마다 별도로 메모리를 할당할 필요가 없습니다. 이는 메모리 사용을 줄이는 데 도움이 됩니다.
+2. **인스턴스 생성 없이 접근 가능**: `static` 메소드나 변수는 인스턴스를 생성하지 않고도 클래스 이름을 통해 직접 접근할 수 있습니다.
+3. **공유 데이터**: `static` 변수는 모든 인스턴스에 의해 공유되므로, 한 곳에서 값을 변경하면 모든 인스턴스에 영향을 미칩니다.
+
+### 주의
+- `static` 변수나 메소드는 인스턴스 변수나 메소드와 독립적이므로, `static` 메소드 내에서는 `this`키워드를 사용할 수 없습니다.
+- `static` 변수나 메소드는 프로그램 실행 시점에 메모리에 로드되며, 프로그램이 종료될 때까지 메모리에 남아 있습니다. 따라서 과도한 `static` 사용은 메모리 낭비를 초래할 수 있습니다.
