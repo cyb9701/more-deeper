@@ -59,7 +59,7 @@ void main() {
 ```
 
 > [!NOTE] Note
-> Consider using top-level functions, instead of static methods, for common or widely used utilities and functionality.
+> Consider using top-level functions, instead of static methods, for common or widely used utilities and functionality. [[Classes and mixins#[Docs] AVOID defining a class that contains only static members]]
 > > 일반적이거나 널리 사용되는 유틸리티 및 기능에 정적 메서드 대신 최상위 함수를 사용하는 것을 고려하세요.
 
 You can use static methods as compile-time constants. For example, you can pass a static method as a parameter to a constant constructor.
