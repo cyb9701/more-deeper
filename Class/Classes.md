@@ -1,7 +1,7 @@
-#class #objects
+#class
 
 ---
-## Docs
+## [Docs] Classes
 https://dart.dev/language/classes
 
 Dart is an object-oriented language with classes and mixin-based inheritance. Every object is an instance of a class, and all classes except `Null` descend from [`Object`](https://api.dart.dev/stable/dart-core/Object-class.html). _Mixin-based inheritance_ means that although every class (except for the [top class](https://dart.dev/null-safety/understanding-null-safety#top-and-bottom), `Object?`) has exactly one superclass, a class body can be reused in multiple class hierarchies. [Extension methods](https://dart.dev/language/extension-methods)are a way to add functionality to a class without changing the class or creating a subclass. [Class modifiers](https://dart.dev/language/class-modifiers) allow you to control how libraries can subtype a class.
@@ -170,64 +170,4 @@ If you need to assign the value of a `final` instance variable after the const
 > - 공장 건설업자를 사용하세요.
 > - 늦은 결승전을 사용하지만, 조심하세요: 이니셜라이저가 없는 늦은 결승전은 API에 세터를 추가합니다.
 
-### Class variables and methods
-Use the `static` keyword to implement class-wide variables and methods.
-> 정적 키워드를 사용하여 클래스 차원의 변수와 메소드를 구현하세요.
-
-#### Static variables
-Static variables (class variables) are useful for class-wide state and constants:
-> 정적 변수(클래스 변수)는 클래스 전체 상태와 상수에 유용합니다:
-
-```dart
-class Queue {
-  static const initialCapacity = 16;
-  // ···
-}
-
-void main() {
-  assert(Queue.initialCapacity == 16);
-}
-```
-
-Static variables aren’t initialized until they’re used.
-> 정적 변수는 사용될 때까지 초기화되지 않는다.
-
-
-> [!NOTE] Note
-> This page follows the [style guide recommendation](https://dart.dev/effective-dart/style#identifiers) of preferring `lowerCamelCase` for constant names.
-> > 이 페이지는 상수 이름을 위해 lowerCamelCase를 선호하는 스타일 가이드 권장 사항을 따릅니다.
-
-#### Static methods
-Static methods (class methods) don’t operate on an instance, and thus don’t have access to `this`. They do, however, have access to static variables. As the following example shows, you invoke static methods directly on a class:
-> 정적 메서드(클래스 메서드)는 인스턴스에서 작동하지 않으므로 이에 접근할 수 없습니다. 그러나, 그들은 정적 변수에 접근할 수 있다. 다음 예에서 볼 수 있듯이, 클래스에서 직접 정적 메서드를 호출합니다:
-
-```dart
-import 'dart:math';
-
-class Point {
-  double x, y;
-  Point(this.x, this.y);
-
-  static double distanceBetween(Point a, Point b) {
-    var dx = a.x - b.x;
-    var dy = a.y - b.y;
-    return sqrt(dx * dx + dy * dy);
-  }
-}
-
-void main() {
-  var a = Point(2, 2);
-  var b = Point(4, 4);
-  var distance = Point.distanceBetween(a, b);
-  assert(2.8 < distance && distance < 2.9);
-  print(distance);
-}
-```
-
-> [!NOTE] Note
-> Consider using top-level functions, instead of static methods, for common or widely used utilities and functionality.
-> > 일반적이거나 널리 사용되는 유틸리티와 기능에 대해 정적 방법 대신 최상위 기능을 사용하는 것을 고려하십시오.
-
-You can use static methods as compile-time constants. For example, you can pass a static method as a parameter to a constant constructor.
-> 정적 메소드를 컴파일 타임 상수로 사용할 수 있습니다. 예를 들어, 정적 메서드를 상수 생성자에 매개 변수로 전달할 수 있습니다.
-> 
+### [[static | Class variables and methods]]
