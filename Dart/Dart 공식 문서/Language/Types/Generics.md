@@ -62,3 +62,224 @@ abstract class Cache<T> {
 
 In this code, T is the stand-in type. It’s a placeholder that you can think of as a type that a developer will define later.
 > 이 코드에서, T는 스탠드인 유형이다. 개발자가 나중에 정의할 유형으로 생각할 수 있는 자리 표시자입니다.
+
+### Using collection literals
+List, set, and map literals can be parameterized. Parameterized literals are just like the literals you’ve already seen, except that you add `<_type_>` (for lists and sets) or `<_keyType_, _valueType_>` (for maps) before the opening bracket. Here is an example of using typed literals:
+> 목록, 설정 및 지도 리터럴을 매개 변수화할 수 있습니다. 매개변수화된 리터럴은 오프닝 괄호 앞에 <type>(목록 및 세트의 경우) 또는 <keyType, valueType>(지도의 경우)을 추가하는 것을 제외하고는 이미 본 리터럴과 같습니다. 다음은 입력된 리터럴을 사용하는 예입니다:
+
+```dart
+var names = <String>['Seth', 'Kathy', 'Lars'];
+var uniqueNames = <String>{'Seth', 'Kathy', 'Lars'};
+var pages = <String, String>{
+  'index.html': 'Homepage',
+  'robots.txt': 'Hints for web robots',
+  'humans.txt': 'We are people, not machines'
+};
+```
+
+### Using parameterized types with constructors
+To specify one or more types when using a constructor, put the types in angle brackets (`<...>`) just after the class name. For example:
+> 생성자를 사용할 때 하나 이상의 유형을 지정하려면, 클래스 이름 바로 뒤에 괄호(<...>)에 유형을 넣으십시오. 예를 들어:
+
+```dart
+var nameSet = Set<String>.from(names);
+```
+
+The following code creates a map that has integer keys and values of type View:
+> 다음 코드는 뷰 유형의 정수 키와 값이 있는 지도를 만듭니다:
+
+```dart
+var views = Map<int, View>();
+```
+
+### Generic collections and the types they contain
+Dart generic types are _reified_, which means that they carry their type information around at runtime. For example, you can test the type of a collection:
+> 다트 일반 유형은 재구성되며, 이는 런타임에 유형 정보를 가지고 다닌다는 것을 의미합니다. 예를 들어, 컬렉션의 유형을 테스트할 수 있습니다:
+
+```dart
+var names = <String>[];
+names.addAll(['Seth', 'Kathy', 'Lars']);
+print(names is List<String>); // true
+```
+
+
+> [!NOTE]
+> In contrast, generics in Java use _erasure_, which means that generic type parameters are removed at runtime. In Java, you can test whether an object is a List, but you can’t test whether it’s a `List<String>`.
+> > 대조적으로, 자바의 제네릭은 삭제를 사용하며, 이는 제네릭 유형 매개 변수가 런타임에 제거된다는 것을 의미합니다. 자바에서는 객체가 목록인지 테스트할 수 있지만, List<String>인지 테스트할 수는 없습니다.
+
+### Restricting the parameterized type
+When implementing a generic type, you might want to limit the types that can be provided as arguments, so that the argument must be a subtype of a particular type. You can do this using `extends`.
+> 일반 유형을 구현할 때, 인수로 제공할 수 있는 유형을 제한하여 인수가 특정 유형의 하위 유형이어야 합니다. 확장을 사용하여 이것을 할 수 있습니다.
+
+A common use case is ensuring that a type is non-nullable by making it a subtype of `Object` (instead of the default, [`Object?`](https://dart.dev/null-safety/understanding-null-safety#top-and-bottom)).
+> 일반적인 사용 사례는 유형을 객체의 하위 유형으로 만들어 무효화할 수 없도록 하는 것입니다(기본 객체 대신?).
+
+```dart
+class Foo<T extends Object> {
+  // Any type provided to Foo for T must be non-nullable.
+}
+```
+
+You can use `extends` with other types besides `Object`. Here’s an example of extending `SomeBaseClass`, so that members of `SomeBaseClass` can be called on objects of type `T`:
+> 객체 이외의 다른 유형과 함께 확장을 사용할 수 있습니다. 다음은 SomeBaseClass의 구성원이 T 유형의 객체에서 호출될 수 있도록 SomeBaseClass를 확장하는 예입니다.
+
+```dart
+class Foo<T extends SomeBaseClass> {
+  // Implementation goes here...
+  String toString() => "Instance of 'Foo<$T>'";
+}
+
+class Extender extends SomeBaseClass {...}
+```
+
+It’s OK to use `SomeBaseClass` or any of its subtypes as the generic argument:
+> SomeBaseClass 또는 그 하위 유형을 일반적인 인수로 사용하는 것은 괜찮습니다:
+
+```dart
+var someBaseClassFoo = Foo<SomeBaseClass>();
+var extenderFoo = Foo<Extender>();
+```
+
+It’s also OK to specify no generic argument:
+> 일반적인 인수를 지정하지 않아도 괜찮습니다:
+
+```dart
+var foo = Foo();
+print(foo); // Instance of 'Foo<SomeBaseClass>'
+```
+
+Specifying any non-`SomeBaseClass` type results in an error:
+> SomeBaseClass가 아닌 유형을 지정하면 오류가 발생합니다:
+
+```dart
+// static analysis: error/warning
+var foo = Foo<Object>();
+```
+
+### Using generic methods
+Methods and functions also allow type arguments:
+> 방법과 함수는 또한 유형 인수를 허용합니다:
+
+```dart
+T first<T>(List<T> ts) {
+  // Do some initial work or error checking, then...
+  T tmp = ts[0];
+  // Do some additional checking or processing...
+  return tmp;
+}
+```
+
+Here the generic type parameter on `first` (`<T>`) allows you to use the type argument `T` in several places:
+> 여기서 첫 번째(<T>)의 일반 유형 매개 변수를 사용하면 여러 곳에서 유형 인수 T를 사용할 수 있습니다:
+
+- In the function’s return type (`T`).
+- In the type of an argument (`List<T>`).
+- In the type of a local variable (`T tmp`).
+
+> - 함수의 반환 유형(T)에서.
+> - 인수 유형 (List<T>).
+> - 지역 변수(T tmp)의 유형.
+
+---
+## Example
+### 적용 전
+```dart
+class Product {
+  int price;
+  int amount;
+  String title;
+  String description;
+  ProductType type;
+
+  HomeApplicance? homeApplicance;
+  Clothing? clothing;
+  DailyNecessity? dailyNecessity;
+
+  Product({
+    required this.price,
+    required this.amount,
+    required this.title,
+    required this.description,
+    required this.type,
+  });
+
+  setProductMoreInfoWithHomeAppliances(HomeApplicance _homeAppliances) {
+    homeApplicance = _homeAppliances;
+  }
+
+  setProductMoreInfoWithClothing(Clothing _clothing) {
+    clothing = _clothing;
+  }
+
+  setProductMoreInfoWithDailyNecessity(DailyNecessity _dailyNecessity) {
+    dailyNecessity = _dailyNecessity;
+  }
+
+	dynamic get moreInfo {
+    switch (type) {
+      case ProductType.HomeAppliances:
+        return homeApplicance;
+      case ProductType.Clothing:
+        return clothing;
+      case ProductType.DailyNecessity:
+        return dailyNecessity;
+    }
+  }
+}
+
+//api 통해서 상품 호출
+var homeApplianceProduct = Product(
+  price: 1000,
+  amount: 100,
+  title: 'TV',
+  description: 'TV 설명',
+  type: ProductType.HomeAppliances,
+);
+
+homeApplianceProduct.setProductMoreInfoWithHomeAppliances(
+    HomeApplicance(option1: '옵션1', option2: '옵션2'));
+
+//화면
+print((homeApplianceProduct.moreInfo as HomeApplicance).option1);
+```
+
+### 적용 후
+```dart
+class Product<T> {
+  int price;
+  int amount;
+  String title;
+  String description;
+  ProductType type;
+
+  T? _moreInfo;
+
+  Product({
+    required this.price,
+    required this.amount,
+    required this.title,
+    required this.description,
+    required this.type,
+  });
+
+  setProductMoreInfo(T moreInfo) {
+    _moreInfo = moreInfo;
+  }
+
+  T? get moreInfo => _moreInfo;
+}
+
+var homeApplianceProduct = Product<HomeApplicance>(
+  price: 1000,
+  amount: 100,
+  title: 'TV',
+  description: 'TV 설명',
+  type: ProductType.HomeAppliances,
+);
+
+homeApplianceProduct
+    .setProductMoreInfo(HomeApplicance(option1: '옵션1', option2: '옵션2'));
+
+//화면
+print(homeApplianceProduct.moreInfo!.option1);
+```
