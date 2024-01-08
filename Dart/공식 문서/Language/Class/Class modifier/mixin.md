@@ -129,7 +129,8 @@ This is similar to how the `on` directive ensures a mixin has access to any in
 
 ### 언제 사용할까?
 https://paulaner80.tistory.com/entry/Dart-mixin-이란-1
-![[mixin.png]]
+
+<img width="820" alt="mixin" src="https://github.com/cyb9701/more-deeper/assets/59527787/b4b444d9-f3aa-4eb8-ae99-2edacc5558c4">
 
 `Animal`이라는 슈퍼클래스가 있습니다. `Mammal`, `Bird`, `Fish`가 그 클래스를 상속합니다. 가장 마지막에는 콘크리트 클래스들이 있습니다. 작은 사각형은 행동을 나타냅니다. 
 예를 들어, 파란색 사각형은이 동작을하는 클래스의 인스턴스가 수영 할 수 있음을 나타냅니다. 어떤 동물들은 공통적 인 행동을 공유합니다. 
