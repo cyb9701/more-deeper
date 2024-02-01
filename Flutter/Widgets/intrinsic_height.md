@@ -1,4 +1,4 @@
-## IntrinsicHeight class
+## [IntrinsicHeight class](https://api.flutter.dev/flutter/widgets/IntrinsicHeight-class.html)
 
 자식의 고유 높이에 맞게 자식 크기를 조정하는 위젯입니다.
 
@@ -11,8 +11,6 @@
 
 이 클래스는 최종 레이아웃 단계 전에 예측적 레이아웃 단계를 추가하기 때문에 상대적으로 비용이 많이 듭니다.
 가능하면 사용을 자제하세요. 최악의 경우 이 위젯은 트리 깊이가 O(N²)인 레이아웃을 초래할 수 있습니다.
-
-https://api.flutter.dev/flutter/widgets/IntrinsicHeight-class.html
 
 ## AS-IS
 
