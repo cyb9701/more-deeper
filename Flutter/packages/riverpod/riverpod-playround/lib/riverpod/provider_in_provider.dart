@@ -11,6 +11,7 @@ enum FilterState {
 final filterProvider = StateProvider<FilterState>((ref) => FilterState.all);
 
 final filteredShoppingListProvider = Provider<List<ShoppingItemModel>>((ref) {
+  // provider 안에서 ref를 사용할 경우, 웬만하면 watch를 사용하는 것을 권장한다.
   final filterState = ref.watch(filterProvider);
   final shoppingListState = ref.watch(shoppingListProvider);
 
