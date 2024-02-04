@@ -14,7 +14,7 @@
 
 ## AS-IS
 
-Column에서 spaceBetween이 적용해도 Container의 높이를 전체로 차지하고 있지 않는다.
+Column에서 spaceBetween이 적용해도 Container의 높이를 전체로 차지하고 있지 않는다
 
 ```dart
 class UnUsedIntrinsicHeight extends StatelessWidget {
