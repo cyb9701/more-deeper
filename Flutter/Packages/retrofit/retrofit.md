@@ -1,7 +1,6 @@
-패키지 버전: 4.1.0
-
 ## [retrofit](https://pub.dev/packages/retrofit)
 
+- v4.1.0
 - dio 클라이언트 생성기이다.
 
 ## Generator

@@ -1,7 +1,6 @@
-패키지 버전: 6.7.1
-
 ## [json_serializable](https://pub.dev/packages/json_serializable)
 
+- v6.7.1
 - Json 처리를 위한 Dart 빌드 시스템 빌더를 제공한다.
 - 빌더는 [package:json_annotation](https://pub.dev/packages/json_annotation) 에 정의된 클래스로 주석이 달린 멤버를 찾을 때 코드를 생성한다.
 

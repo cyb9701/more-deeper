@@ -1,18 +1,19 @@
 ## [riverpod](https://pub.dev/packages/flutter_riverpod)
 
-상태관리 툴이다.
+- v2.4.10
+- 상태관리 툴이다.
 
 ## Provider의 종류
 
-각각 다른 타입을 반환해주고 사용 목적이 다르다  
-모든 Provider는 글로벌하게 선언된다
-
-- Provider
-- StateProvider
-- StateNotifierProvider
-- FutureProvider
-- StreamProvider
-- ChangeNotifierProvider (사용 안함 - Provider 마이그레이션 용도)
+- 각각 다른 타입을 반환해주고 사용 목적이 다르다
+- 모든 Provider는 글로벌하게 선언된다
+- 종류
+  - Provider
+  - StateProvider
+  - StateNotifierProvider
+  - FutureProvider
+  - StreamProvider
+  - ChangeNotifierProvider (사용 안함 - Provider 마이그레이션 용도)
 
 ## Provider
 
