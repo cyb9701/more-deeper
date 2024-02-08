@@ -154,15 +154,3 @@ abstract class RestClient {
 ```dart
 final client = RestClient(dio, baseUrl: 'your base url');
 ```
-
-##
-
-```dart
-
-```
-
-##
-
-```dart
-
-```
