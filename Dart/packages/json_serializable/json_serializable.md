@@ -1,3 +1,5 @@
+패키지 버전: 6.7.1
+
 ## [json_serializable](https://pub.dev/packages/json_serializable)
 
 - Json 처리를 위한 Dart 빌드 시스템 빌더를 제공한다.
