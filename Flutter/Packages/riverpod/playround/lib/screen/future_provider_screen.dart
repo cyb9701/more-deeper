@@ -8,27 +8,19 @@ class FutureProviderScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final AsyncValue state = ref.watch(multipleFutureProvider);
+    final AsyncValue<List<int>> state = ref.watch(multipleFutureProvider);
 
     return DefaultLayout(
       title: 'Future Provider',
       body: Center(
-        child: state.when(
-          data: (data) {
-            return Text(
-              data.toString(),
+        child: switch (state) {
+          AsyncData(:final value) => Text(
+              value.toString(),
               textAlign: TextAlign.center,
-            );
-          },
-          error: (e, s) {
-            return Text(e.toString());
-          },
-          loading: () {
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
-          },
-        ),
+            ),
+          AsyncError(:final error, :final stackTrace) => Text(error.toString()),
+          _ => const CircularProgressIndicator(),
+        },
       ),
     );
   }
