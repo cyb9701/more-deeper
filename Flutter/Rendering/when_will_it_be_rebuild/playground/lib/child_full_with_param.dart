@@ -1,45 +1,50 @@
 import 'package:flutter/material.dart';
 
-class ChildFullNoParam extends StatefulWidget {
-  const ChildFullNoParam({
+class ChildFullWithParam extends StatefulWidget {
+  final int value;
+
+  const ChildFullWithParam({
     super.key,
+    required this.value,
   });
 
   @override
-  State<ChildFullNoParam> createState() => _ChildFullNoParamState();
+  State<ChildFullWithParam> createState() => _ChildFullWithParamState();
 }
 
-class _ChildFullNoParamState extends State<ChildFullNoParam> {
+class _ChildFullWithParamState extends State<ChildFullWithParam> {
+  static const name = 'full & param';
+
   @override
   void initState() {
-    debugPrint('full & x --- initState');
+    debugPrint('[initState] $name');
     super.initState();
   }
 
   @override
   void didChangeDependencies() {
-    debugPrint('full & x --- didChangeDependencies');
+    debugPrint('[didChangeDependencies] $name');
     super.didChangeDependencies();
   }
 
   @override
-  void didUpdateWidget(covariant ChildFullNoParam oldWidget) {
-    debugPrint('full & x --- didUpdateWidget');
+  void didUpdateWidget(covariant ChildFullWithParam oldWidget) {
+    debugPrint('[didUpdateWidget] $name');
     super.didUpdateWidget(oldWidget);
   }
 
   @override
   Widget build(BuildContext context) {
-    debugPrint('full & x --- build');
+    debugPrint('[build] $name');
     return Container(
       width: 500,
       height: 100,
       color: Colors.red,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          const Text(
-            'full & x',
+          Text(
+            '$name\nvalue: ${widget.value}',
           ),
           ElevatedButton(
             onPressed: () {

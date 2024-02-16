@@ -8,16 +8,18 @@ class ChildLessWithParam extends StatelessWidget {
     required this.value,
   });
 
+  static const name = 'less & param';
+
   @override
   Widget build(BuildContext context) {
-    debugPrint('less & param --- build');
+    debugPrint('[build] $name');
     return Container(
       width: 500,
       height: 100,
       color: Colors.green,
       child: Center(
         child: Text(
-          'less & param $value',
+          '$name\nvalue: $value',
         ),
       ),
     );

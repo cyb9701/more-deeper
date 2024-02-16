@@ -29,10 +29,10 @@ class _ParentState extends State<Parent> {
           },
           child: const Text('setState'),
         ),
-        ChildLessWithParam(value: value),
-        ChildFullWithParam(value: value),
         const ChildLessNoParam(),
+        ChildLessWithParam(value: value),
         const ChildFullNoParam(),
+        ChildFullWithParam(value: value),
       ],
     );
   }
