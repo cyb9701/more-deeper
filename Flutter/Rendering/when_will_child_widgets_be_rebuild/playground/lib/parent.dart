@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:playground/child_full_no_param.dart';
-import 'package:playground/child_full_with_param.dart';
+import 'package:playground/child_ful_no_param.dart';
+import 'package:playground/child_ful_with_param.dart';
 import 'package:playground/child_less_with_param.dart';
 
 import 'child_less_no_param.dart';
@@ -29,8 +29,8 @@ class _ParentState extends State<Parent> with AutomaticKeepAliveClientMixin {
         children: [
           const ChildLessNoParam(),
           ChildLessWithParam(value: value),
-          const ChildFullNoParam(),
-          ChildFullWithParam(value: value),
+          const ChildFulNoParam(),
+          ChildFulWithParam(value: value),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(

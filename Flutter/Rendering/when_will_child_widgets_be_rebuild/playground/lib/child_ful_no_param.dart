@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class ChildFullNoParam extends StatefulWidget {
-  const ChildFullNoParam({
+class ChildFulNoParam extends StatefulWidget {
+  const ChildFulNoParam({
     super.key,
   });
 
   @override
-  State<ChildFullNoParam> createState() => _ChildFullNoParamState();
+  State<ChildFulNoParam> createState() => _ChildFulNoParamState();
 }
 
-class _ChildFullNoParamState extends State<ChildFullNoParam> {
-  static const name = 'full & no param';
+class _ChildFulNoParamState extends State<ChildFulNoParam> {
+  static const name = 'ful & no param';
 
   @override
   void initState() {
@@ -25,7 +25,7 @@ class _ChildFullNoParamState extends State<ChildFullNoParam> {
   }
 
   @override
-  void didUpdateWidget(covariant ChildFullNoParam oldWidget) {
+  void didUpdateWidget(covariant ChildFulNoParam oldWidget) {
     debugPrint('[didUpdateWidget] $name');
     super.didUpdateWidget(oldWidget);
   }
