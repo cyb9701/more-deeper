@@ -1,3 +1,5 @@
+# 식별자(Identifiers)
+
 ## [사용하지 않는 콜백 매개 변수에 대해 \_, \_\_ 등을 사용하는 것을 선호합니다](https://dart.dev/effective-dart/style#prefer-using-_-__-etc-for-unused-callback-parameters)
 
 때때로 콜백 함수의 유형 서명에는 매개 변수가 필요하지만, 콜백 구현은 매개 변수를 사용하지 않습니다.  
@@ -6,6 +8,7 @@
 
 ```dart
 // good
+
 futureOfVoid.then((_) {
   print('Operation complete.');
 });
